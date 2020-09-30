@@ -34,6 +34,46 @@ console.log('The area of this polygon is ' + r.area);
 
 //Create 2 new classes that extend from polygon: triangle and circle and log their names and areas
 
+class triangle extends Polygon {
+  constructor(height,width){
+    super(height, width)
+    this._name = 'triangle';
+    this._sides = 3;
+    this._area = (width * height) / 2;
+  }
+
+  get areaOf(){
+    return this._area
+  }
+   nameOf(){
+    console.log(`My name is ${this._name}`)
+  }
+}
+
+let tr = new triangle (10, 20);
+tr.nameOf()
+console.log(`traingle area is ${tr.areaOf}`)
 
 
+class Trapezoid extends Polygon{
+  constructor(height, base1, base2){
+    super(height);
+    this._name = "Trapezoid";
+    this._base1 = base1;
+    this._base2 = base2;
+    this._height = height;
+  }
 
+  get areaOf(){
+    return (this._base1 + this._base2) * this._height / 2
+  }
+
+  nameOf(){
+    console.log(`I am ${this._name}`)
+  }
+} 
+
+let trap = new Trapezoid(10, 20, 5);
+trap.nameOf();
+
+console.log(`I am Trapezoid and my area is ${trap.areaOf}`)
