@@ -1,14 +1,14 @@
 function greetPeople(people) {
-  var greeting = "He";
-  greeting = greeting + "llo";
-  greeting = greeting + " ";
+let greeting;
 
   people.forEach(function(person) {
-    greeting = greeting + person;
+      const div = document.getElementById('main');
+      const para = document.createElement('p')
+      para.innerHTML = greeting =  `Hello ${person}`;
+      div.appendChild(para)
 	console.log(greeting);
   });
 
-  return greeting;
 }
 
 /*
@@ -17,3 +17,10 @@ function greetPeople(people) {
   */
   var mentors = ['Irina', 'Ashleigh', 'Etza'];
   var result = greetPeople(mentors)
+
+
+  
+  div.appendChild(p)
+
+
+   
